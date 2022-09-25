@@ -3,6 +3,7 @@
 from fastapi import FastAPI
 #buat bikin skema model
 from pydantic import BaseModel
+import json
 #serialisasi : proses convert format data ke bentuk yang bisa dikirim lewat API (kebanyakan JSON)
 app = FastAPI()
 
@@ -12,6 +13,8 @@ class Buku(BaseModel):
     penulis : str
     deskripsi : str
     cover : str
+
+with open('contohjson.json','r')
 
 @app.post("/")
 def postBuku(id,judul,penulis,deskripsi,cover):
@@ -23,7 +26,7 @@ def postBuku(id,judul,penulis,deskripsi,cover):
         "cover": cover
     }
     return results
-    
+
 @app.get("/{id}")
 def getBuku(id):
     iniBuku = id
