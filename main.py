@@ -7,4 +7,24 @@ from pydantic import BaseModel
 app = FastAPI()
 
 class Buku(BaseModel):
-    
+    id : int
+    judul : str
+    penulis : str
+    deskripsi : str
+    cover : str
+
+@app.post("/")
+def postBuku(id,judul,penulis,deskripsi,cover):
+    results = {
+        "id":id,
+        "judul": judul,
+        "penulis": penulis,
+        "deskripsi": deskripsi,
+        "cover": cover
+    },
+
+@app.get("/{id}")
+def getBuku(id):
+    iniBuku = id
+    return Buku[id]
+
