@@ -1,0 +1,18 @@
+{"buku": [
+    {
+        "id":1,
+        "judul":"judul",
+        "penulis":"penulis",
+        "deskripsi":"deskripsi",
+        "cover":"linknya"
+    },
+    {
+        "id":1,
+        "judul":"judul",
+        "penulis":"penulis",
+        "deskripsi":"deskripsi",
+        "cover":"linknya"
+    }
+    
+]
+}
