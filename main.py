@@ -1,5 +1,6 @@
 #belajar fastAPI
 #uvicorn main:app --reload
+from distutils.log import debug
 from fastapi import FastAPI
 #buat bikin skema model
 from pydantic import BaseModel
@@ -14,21 +15,11 @@ class Buku(BaseModel):
     deskripsi : str
     cover : str
 
-with open('contohjson.json','r')
-
 @app.post("/")
-def postBuku(id,judul,penulis,deskripsi,cover):
-    results = {
-        "id":id,
-        "judul": judul,
-        "penulis": penulis,
-        "deskripsi": deskripsi,
-        "cover": cover
-    }
+def postBuku(results:Buku):
     return results
 
-@app.get("/{id}")
-def getBuku(id):
-    iniBuku = id
-    return Buku[id]
-
+#@app.get("/{id}")
+#def getBuku(id):
+#    iniBuku = id
+#    return Buku[id]
