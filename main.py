@@ -21,8 +21,9 @@ def postBuku(id,judul,penulis,deskripsi,cover):
         "penulis": penulis,
         "deskripsi": deskripsi,
         "cover": cover
-    },
-
+    }
+    return results
+    
 @app.get("/{id}")
 def getBuku(id):
     iniBuku = id
