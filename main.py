@@ -1,6 +1,6 @@
 #belajar fastAPI
 #uvicorn main:app --reload
-from distutils.log import debug
+import uvicorn
 from fastapi import FastAPI
 #buat bikin skema model
 from pydantic import BaseModel
@@ -23,3 +23,6 @@ def postBuku(results:Buku):
 #def getBuku(id):
 #    iniBuku = id
 #    return Buku[id]
+
+if __name__=='__main__':
+    uvicorn.run(port=5000)
