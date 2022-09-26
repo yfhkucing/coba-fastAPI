@@ -19,10 +19,10 @@ class Buku(BaseModel):
 def postBuku(results:Buku):
     return results
 
-#@app.get("/{id}")
-#def getBuku(id):
-#    iniBuku = id
-#    return Buku[id]
+@app.get("/{id}")
+def getBuku(id):
+    iniBuku = id
+    return Buku[id]
 
 if __name__=='__main__':
-    uvicorn.run(port=5000)
+    uvicorn.run(app,port=5000)
